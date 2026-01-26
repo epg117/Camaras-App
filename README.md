@@ -40,24 +40,34 @@ sudo apt install mpv python3-pyqt5 python3-venv python3-full
 ## Instalación del proyecto
 
 Clonar el repositorio:
-- git clone https://github.com/epg117/camaras-app.git
-- cd camaras-app
+```bash
+git clone https://github.com/epg117/camaras-app.git
+cd camaras-app
+```
 
 Crear un entorno virtual (venv):
-- python3 -m venv venv --system-site-packages
+```bash
+python3 -m venv venv --system-site-packages
+```
 
 Activa el entorno:
-- source venv/bin/activate
+```bash
+source venv/bin/activate
+```
 
 Instalar dependencias Python:
-- pip install python-mpv
+```bash
+pip install python-mpv
+```
 
 ## Ejecución
 
 ### IMPORTANTE: libmpv presenta un bug conocido con locales distintos de C (por ejemplo **es_CL**, **es_ES**).
 
 Opción recomendada:
-- LC_NUMERIC=c python camaras.py
+```bash
+LC_NUMERIC=c python camaras.py
+```
 
 ### Script lanzador (recomendado)
 
