@@ -5,8 +5,9 @@ import sys
 import mpv
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QFrame
 
+# YOU CAN ADD ALL YOUR CAMERAS HERE, THE SCRIPT IS BUILT FOR 2X2 GRID SO YOU CAN EDIT IT
 CAMARAS = [
-    "rtsp://user:pass@YOUR-IP/h264/ch1/main/av_stream",
+    "rtsp://user:pass@YOUR-CAMERA-IP/h264/ch1/main/av_stream",
 ]
 
 class Player(QFrame):
