@@ -74,6 +74,10 @@ LC_NUMERIC=c python camaras.py
 Para no escribir el comando cada vez, se incluye un script **run.sh**:
 
 ```bash
+nano run.sh
+```
+Contenido del **run.sh**:
+```bash
 #!/bin/bash
 export LC_NUMERIC=C
 source venv/bin/activate
@@ -86,6 +90,10 @@ Ejecutar:
 ```
 ## Acceso directo (.desktop)
 
+Crear archivo .desktop:
+```bash
+nano ~/.local/share/applications
+```
 Ejemplo de archivo **.desktop**
 ```bash
 [Desktop Entry]
@@ -97,6 +105,13 @@ Terminal=false
 Type=Application
 Categories=Video;Security;
 ````
+Otorgar permisos al archivo **.desktop**:
+```bash
+chmod +x ~/.local/share/applications/camaras.desktop
+```
+
+Ya con esto podrás acceder al acceso directo desde el menú
+
 ## Notas técnicas importantes
 - Se utiliza **RTSP** sobre **TCP** para mayor estabilidad.
 - Se desactiva el audio (audio=no) para evitar errores.
