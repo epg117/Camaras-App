@@ -6,7 +6,7 @@ The project is intended for personal/domestic use and as a base to continue expa
 
 ---
 
-![Monitor de Cámaras IP](https://i.imgur.com/TpvOdKn.jpeg)
+![Monitor de Cámaras IP](https://i.imgur.com/KVRpsAs.png)
 
 ## 🚀 Characteristics
 
