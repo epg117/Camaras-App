@@ -6,6 +6,8 @@ El proyecto está pensado para uso personal/doméstico y como base para seguir a
 
 ---
 
+![Monitor de Cámaras IP](https://i.imgur.com/TpvOdKn.jpeg)
+
 ## 🚀 Características
 
 - Visualización de **4 cámaras IP** en una grilla 2×2
