@@ -1,6 +1,6 @@
 # 📷 IP Camera Monitor on Linux (Python + mpv)
 
-A desktop application in **Linux** developed in **Python** that allows viewing **multiple IP cameras (RTSP)** in a single window using **mpv (libmpv)** embedded in a **PyQt5** interface.
+A desktop application on **Linux** developed in **Python** that allows viewing **multiple IP cameras (RTSP)** in a single window using **mpv (libmpv)** embedded in a **PyQt5** interface.
 
 The project is intended for personal/domestic use and as a base to continue expanding functionalities (full screen, reconnection, recording, etc.).
 
