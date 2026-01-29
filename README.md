@@ -1,27 +1,27 @@
-# 📷 Monitor de Cámaras IP en Linux (Python + mpv)
+# 📷 IP Camera Monitor on Linux (Python + mpv)
 
-Aplicación de escritorio en **Linux** desarrollada en **Python** que permite visualizar **múltiples cámaras IP (RTSP)** en una sola ventana usando **mpv (libmpv)** embebido en una interfaz **PyQt5**.
+A desktop application in **Linux** developed in **Python** that allows viewing **multiple IP cameras (RTSP)** in a single window using **mpv (libmpv)** embedded in a **PyQt5** interface.
 
-El proyecto está pensado para uso personal/doméstico y como base para seguir ampliando funcionalidades (pantalla completa, reconexión, grabación, etc.).
+The project is intended for personal/domestic use and as a base to continue expanding functionalities (full screen, reconnection, recording, etc.).
 
 ---
 
 ![Monitor de Cámaras IP](https://i.imgur.com/TpvOdKn.jpeg)
 
-## 🚀 Características
+## 🚀 Characteristics
 
-- Visualización de **4 cámaras IP** en una grilla 2×2
-- Uso de **mpv** (ffmpeg) para máxima compatibilidad con RTSP
-- Interfaz gráfica con **PyQt5**
-- Bajo consumo y baja latencia
-- RTSP sobre **TCP** (más estable para cámaras IP)
-- Sin audio
-- Entorno Python **aislado con venv**
-- Funciona correctamente en **Linux Mint / Ubuntu**
+- Display of **4 IP cameras** in a 2x2 grid
+- Use of **mpv** (ffmpeg) for maximum RTSP compatibility
+- Graphical interface with **PyQt5**
+- Low power consumption and low latency
+- RTSP over **TCP** (more stable for IP cameras)
+- No audio
+- Python environment **isolated with venv**
+- Works correctly on **Linux Mint / Ubuntu**
 
 ---
 
-## 🧠 Tecnologías utilizadas
+## 🧠 Technologies used
 
 - **Python 3**
 - **mpv / libmpv**
@@ -31,72 +31,72 @@ El proyecto está pensado para uso personal/doméstico y como base para seguir a
 
 ---
 
-## 📦 Requisitos del sistema
+## 📦 System requirements
 
-Instalar dependencias del sistema:
+Install system dependencies:
 
 ```bash
 sudo apt install mpv python3-pyqt5 python3-venv python3-full
 ```
 
-## Instalación del proyecto
+## Project instalation
 
-Clonar el repositorio:
+Clone the repository:
 ```bash
 git clone https://github.com/epg117/camaras-app.git
 cd camaras-app
 ```
 
-Crear un entorno virtual (venv):
+Create a virtual enviroment (venv):
 ```bash
 python3 -m venv venv --system-site-packages
 ```
 
-Activa el entorno:
+Activate the enviroment:
 ```bash
 source venv/bin/activate
 ```
 
-Instalar dependencias Python:
+Install Python dependencies:
 ```bash
 pip install python-mpv
 ```
 
-## Ejecución
+## Execution
 
-### IMPORTANTE: libmpv presenta un bug conocido con locales distintos de C (por ejemplo **es_CL**, **es_ES**).
+### IMPORTANT: libmpv has a known bug with locales other than C (e.g., **es_CL**, **es_ES**).
 
-Opción recomendada:
+Recommended option:
 ```bash
 LC_NUMERIC=c python camaras.py
 ```
 
-### Script lanzador (recomendado)
+### Launcher script (recommended)
 
-Para no escribir el comando cada vez, se incluye un script **run.sh**:
+To avoid typing the command each time, a **run.sh** script is included:
 
 ```bash
 nano run.sh
 ```
-Contenido del **run.sh**:
+Content of **run.sh**:
 ```bash
 #!/bin/bash
 export LC_NUMERIC=C
 source venv/bin/activate
 python camaras.py
 ```
-Ejecutar:
+Execute:
 
 ```bash
 ./run.sh
 ```
-## Acceso directo (.desktop)
+## Direct access (.desktop)
 
-Crear archivo .desktop:
+Create **.desktop** file:
 ```bash
 nano ~/.local/share/applications
 ```
-Ejemplo de archivo **.desktop**
+Example of **.desktop** file
 ```bash
 [Desktop Entry]
 Name=Mis Cámaras
@@ -107,21 +107,21 @@ Terminal=false
 Type=Application
 Categories=Video;Security;
 ````
-Otorgar permisos al archivo **.desktop**:
+Grant permissions to the **.desktop** file:
 ```bash
 chmod +x ~/.local/share/applications/camaras.desktop
 ```
 
-Ya con esto podrás acceder al acceso directo desde el menú
+Now you can access the shortcut from the menu
 
-## Notas técnicas importantes
-- Se utiliza **RTSP** sobre **TCP** para mayor estabilidad.
-- Se desactiva el audio (audio=no) para evitar errores.
-- Se desactiva aceleración por hardware si es necesario (hwdec=no)
-- **venv** solo contiene dependencias del proyecto, no afecta al Python del sistema.
-- El directorio **venv/** es descartable y no deberia subirse al repositorio.
+## Important Technical Notes
+- **RTSP** is used over **TCP** for greater stability.
+- Audio is disabled (audio=no) to prevent errors.
+- Hardware acceleration is disabled if necessary (hwdec=no).
+- **venv** only contains project dependencies and does not affect the system Python.
+- The **venv/** directory is disposable and should not be uploaded to the repository.
 
-## Estructura del proyecto
+## Project structure
 ```text
 camaras-app/
 ├── camaras.py
